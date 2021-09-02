@@ -11,18 +11,127 @@
 </head>
 <body>
     <header>
-        <h1>Hola Mundo</h1>
+        <h1>Estudia &dollar;0n&dollar;0</h1>
         <h2>Este es el header de la pagina</h2>
     </header>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="http://www.google.com">Google</a>
+        <a href="The-Complete-HTML-Cheat-Sheet.pdf" target="_blank">Ver pdf</a>
+        <a href="The-Complete-HTML-Cheat-Sheet.pdf" download="">Descargar pdf</a>
     </nav>
-    <p>Este es un parrafo cualquiera.<br>
-        GAAAAAAAAA <br>
-        <br>
-        Esta es la primera pagina web html del curso
-    </p>
+    <main>
+        <section>
+            <h2>Seccion 1</h2>
+            <article>
+                <p>Este es            el parrafo
+                    Esta es otra linea
+                </p>
+                <pre>
+                    Este es            el parrafo
+                    Esta es otra linea
+                </pre>
+                <span>
+                    <p>Este es            el parrafo
+                        Esta es otra linea
+                    </p>
+                </span>
+                <pre>
+                    <code>
+                        <!--Investigar acerca de lso HTMLs entities-->
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Hola MUndo&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;h1&gt; Hola Mundo HTML &lt;/h1&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code>
+                </pre> <br>
+                <p>Una bandera &#x1f3f4;&#x200d;&#x2620;&#xfe0f;</p>
+                <a href="https://dev.w3.org/html5/html-author/charref" target="_blank">HTML Entities</a>
+                <article>
+                    <h3>Etiquetas para dar enfasis</h3>
+                    <p>Ubícate en primer lugar cuando seas estudiante de inicial, primaria, secundaria y superior, Ahí quiero verte, mis respetos te diría serenazgo así ¿Qué chucha eres huevón?  NO ERES NI MIERDA OE! NO ERES NI MIERDA! NO ERES NADA! Ahorita te pongo así en conocimiento una pregunta cultural no sabes ni mierda, en conocimientos no sabes nada! Me vienes acá con tus huevadas? Ahora me dices así como buena persona 'Tranquilo tranquilo'. PIENSA PE CHATO, PIENSA! ESTUDIA SONSO!!</p>
+                    <p>Un <strong>superhéroe</strong>  es un 
+                        <em>personaje de ficción</em> cuyas 
+                        características superan las del 
+                        <i>héroe clásico</i> , generalmente con 
+                        <u>poderes sobrehumanos</u> aunque no 
+                        necesariamente, y entroncado con 
+                        la <b>ciencia ficción</b> . Generados a 
+                        finales de los años 1930 en la 
+                        industria del comic book 
+                        <mark>estadounidense</mark> , que contribuyeron 
+                        a levantar,​han gozado de multitud 
+                        de adaptaciones a otros medios, 
+                        especialmente el cine.</p>
+                </article> <br>
+                <small>INGENIERÍA DE SISTEMAS
+                    El egresado de la Carrera de Ingeniería de Sistemas está preparado para afrontar los retos y las exigencias de las organizaciones, gracias a su capacidad para integrar los procesos de negocios y de proponer, desarrollar, implementar y gestionar soluciones basadas en tecnologías de información.</small>
+            </article>
+        </section>
+        <section>
+            <h3>Etiquetas adicionales</h3>
+            <cite>Rincon del Vago.com</cite>
+            <address>http://www.rincondelvago.com</address>
+            La clase fue a las <time>20:00</time> hrs <br>
+            La clase fue el <time datetime="2021-09-01T20:00">Miercoles 01 de Setiembre del 2021</time>
+        </section>
+        <section>
+            <h3>Manejo de Imagenes</h3>
+            <p>Uso de etiqueta img</p>
+            <img src="img/html-1.png" width="128" 
+            height="128" alt="Imagen 1">
+            <p>Uso de la herramienta picture</p>
+            <picture>
+                <source media="(min-width:800px)" srcset="img/html-2.png">
+                <source media="(min-width:600px)" srcset="img/html-3.png">
+                <source media="(min-width:400px)" srcset="img/html-4.png">
+                <img src="img/html-1.png" width="128" 
+                height="128" alt="Imagen 1">
+            </picture> <br>
+            <picture>
+                <source media="(min-width:800px)" srcset="img/html-6.png">
+                <source media="(min-width:600px)" srcset="img/html-7.png">
+                <img src="img/html-1.png" width="128" 
+                height="128" alt="Imagen 1">
+            </picture>
+            <p>Uso de figcaption</p>
+            <figure>
+            <img src="img/html-1.png" width="128" 
+            height="128" alt="Imagen 1">
+            <figcaption>Titulo de la imagen</figcaption>
+            </figure>
+        </section>
+        
+        <section>
+            <h3>Listas</h3>
+            <ol>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+            <ul>
+                <li>Pollito</li>
+                <li>Papas fritas</li>
+                <li>Coca Cola</li>
+                <li>Pie de Manzana</li>
+                <li>Ceviche</li>
+            </ul>
+        </section>
+    </main>
+    <footer>Derechos reservados &copy: 2021-2
+        <details>
+            <summary>En este año 2021 se hicieron tres ciclos</summary>
+                <p>Ciclo de verano</p>
+                <p>Ciclo regular 2021-1</p>
+                <p>Ciclo regular 2021-2</p>
+        </details>
+    </footer>
+    
 
 </body>
 </html>
