@@ -12,7 +12,8 @@
     <!--La ruta es absoluta cuando comienza con 
         el slash en el action del form
     La ruta es relativa cuando no tiene slash-->
-    <form action="xyz" method="get" id="myform">
+    <form action="xyz" method="get" id="myform"
+    autocomplete="on">
         <p>
             <label>Nombre
                 <input type="text" size="25" 
@@ -46,6 +47,11 @@
                 <input type="month">
             </label>
         </p>
+        <p>
+            <label for="">En que mes semana estamos
+                <input type="week">
+            </label>
+        </p>
         <p><label for="">Ingresa su nota esperada
                 <input type="number" min="0" max="20"
                 step="1" value="11">
@@ -65,9 +71,14 @@
             telefono con el prefijo de tu ciudad
             <input type="tel" 
             placeholder="(###) ###-###-###"
-            pattern="\(d{3}\) +d{3}-\d{4}">
+            pattern="\(\d{3}\) +d{3}-\d{4}">
         </label></p>
-
+        <p>
+            <label for="">Busqueda
+                <input type="search" 
+                placeholder="Busca algo">
+            </label>
+        </p>
 
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpiar">
