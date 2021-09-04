@@ -12,12 +12,81 @@
     <!--La ruta es absoluta cuando comienza con 
         el slash en el action del form
     La ruta es relativa cuando no tiene slash-->
-    <form action="xyz" method="get">
+    <form action="xyz" method="post" id="myform">
         <p>
-            <label for="">Nombre
-                <input type="text" size="25" maxlength="80">
+            <label>Nombre
+                <input type="text" size="25" 
+                maxlength="80" name="nombre">
             </label>
         </p>
+        <p>
+            <input type="hidden" name="destino"
+            value="helpcis@ulima.edu.pe">
+            <input type="hidden" name="asunto"
+            value="Ayuda auxilio!">
+            <input type="hidden" name="copia"
+            value="billy@ulima.edu.pe">
+        </p>
+        <p>
+            <label>Email:
+                <input type="password" size="25"
+                name="correo">
+            </label>
+        </p>
+        <p>
+            <label>Comentarios:
+                <textarea name="comentarios" 
+                id="" cols="40" rows="4"
+                placeholder="Ingresa tus opiniones">
+                </textarea>
+            </label>
+        </p>
+        <p>
+            <strong>Los cursos que me gustan son:
+            </strong> <br>
+            <label for="">Introducción a la 
+                programación
+                <input type="checkbox" value="c1"
+                name="cursos">
+            </label> <br>
+            <label for="">Programacion Orientada
+                a Objetos
+                <input type="checkbox" value="c2"
+                name="cursos">
+            </label> <br>
+            <label for="">Programcion de Videojuegos
+                <input type="checkbox" value="c3"
+                name="cursos">
+            </label>
+        </p>
+
+        <p>
+            <strong>En que rama te gustaria practicar</strong>
+            <br>
+            <label for="">Redes 
+                <input type="radio" name="practicas" 
+                value="p1">
+            </label> <br>
+            <label for="">Software 
+                <input type="radio" name="practicas" 
+                value="p2" checked>
+            </label> <br>
+            <label for="">Gestion
+                <input type="radio" name="practicas" 
+                value="p3">
+            </label> <br>
+        </p>
+        <p><label for="">En la escala del 1 al 5
+            Cuanto te gusta la carrera?
+            <select name="escala">
+                <option value="5">Muchisimo</option>
+                <option value="4" selected>Mucho</option>
+                <option value="3">Mas o menos</option>
+                <option value="2">Casi Nada</option>
+                <option value="1">Nada</option>
+            </select>
+        </label>
+    </p>
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpiar">
     </form>    
