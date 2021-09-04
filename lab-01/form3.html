@@ -12,7 +12,7 @@
     <!--La ruta es absoluta cuando comienza con 
         el slash en el action del form
     La ruta es relativa cuando no tiene slash-->
-    <form action="xyz" method="post" id="myform">
+    <form action="xyz" method="get" id="myform">
         <p>
             <label>Nombre
                 <input type="text" size="25" 
@@ -25,12 +25,11 @@
             </label>
         </p>
         <p>
-            <label for="">Ingresa la fecha de tu 
-                cumpleaños
-                <input type="date">
+            <label for="">Ingresa el datetime de algo
+                <input type="date" name="mifecha">
             </label>
         </p>
-
+        
 
         <input type="submit" value="Enviar">
         <input type="reset" value="Limpiar">
