@@ -1,0 +1,12 @@
+/*media queries*/
+
+@media all{
+    body{
+        background-color: black;
+    }
+}
+@media (max-width:600px){
+    body{
+        background-color: blue;
+    }
+}

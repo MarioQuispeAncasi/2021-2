@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic:wght@700&display=swap');
 #definicion{
     font-weight: bolder;
 }
@@ -9,5 +10,11 @@ p{
     text-indent: 2rem;
     font-style: italic;
     font-stretch: ultra-condensed;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Coming Soon', cursive;
+}
+section{
+    background-color: pink;
+}
+footer{
+    background-color: white;
 }
