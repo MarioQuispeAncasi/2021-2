@@ -1,0 +1,13 @@
+/*
+index
+*/
+.alfondo{
+    position: absolute;/*posicionar al eje del navegador*/
+    top:0px;
+    left: 0px;
+}
+.almedio{
+    position: absolute;
+    top:25px;
+    left: 100px;
+}
