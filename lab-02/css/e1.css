@@ -5,9 +5,17 @@ index
     position: absolute;/*posicionar al eje del navegador*/
     top:0px;
     left: 0px;
+    z-index: 2;
 }
 .almedio{
     position: absolute;
     top:25px;
     left: 100px;
+    z-index: 3;
+}
+.adelante{
+    position: absolute;
+    top:50px;
+    left: 150px;
+    z-index: 1;
 }
