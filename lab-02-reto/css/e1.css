@@ -1,0 +1,39 @@
+/*
+index
+*/
+/*.alfondo{
+    position: absolute;/*posicionar al eje del navegador
+    top:0px;
+    left: 0px;
+    z-index: 1;
+}
+.almedio{
+    position: absolute;
+    top:25px;
+    left: 100px;
+    z-index: 2;
+}
+.adelante{
+    position: absolute;
+    top:50px;
+    left: 150px;
+    z-index: 3;
+}*/
+.alfondo{
+    position: relative;/*posicionar al eje del navegador*/
+    top:0px;
+    left: 0px;
+    z-index: 1;
+}
+.almedio{
+    position: relative;
+    top:25px;
+    left: 100px;
+    z-index: 2;
+}
+.adelante{
+    position: relative;
+    top:50px;
+    left: 150px;
+    z-index: 3;
+}

@@ -1,0 +1,12 @@
+.foreground_image{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    z-index: 1;
+}
+.cabecera{
+    background-image: url(../img/avengers.jpg);
+    background-position: right;
+    padding:300px;
+}
+
