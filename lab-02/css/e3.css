@@ -1,3 +1,13 @@
 #definicion{
     font-weight: bolder;
 }
+p{
+    /*width: 20%;
+    height: 10px;*/
+    text-align: justify;
+    overflow: scroll;
+    text-indent: 2rem;
+    font-style: italic;
+    font-stretch: ultra-condensed;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
