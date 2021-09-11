@@ -2,3 +2,12 @@
 SELECTORES
 CLASE .NOMBRE-DE-LA-CLASE class="nombre de la clase
 id  #nombre-del-id      id="nombre-de-id*/
+
+#cabecera-principal{
+    background-image: url(../img/logo1.png),
+    url(../img/avengers.jpg);
+    background-repeat: no-repeat;
+    background-position: top left, 100% center;
+    background-origin: border-box,content-box;
+
+}
