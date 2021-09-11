@@ -83,7 +83,31 @@ img{
     }
     100%{
         opacity: 0;
-        left: 100px;
-        top:50px;
+        left: 50px;
+        top:0px;
     }
+}
+/*Zona de navegación nav*/
+nav ul {
+    list-style: none;
+    padding: 1px;
+    display: block;
+    clear: right;
+    background-color: yellow;
+}
+nav ul {
+    list-style: none;
+    padding: 1px;
+    display: block;
+    clear: right;
+    background-color: yellow;
+    height: 24px;
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a:hover{
+    text-decoration: unlerline;
+    color: red;
+
 }
