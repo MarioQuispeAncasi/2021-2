@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic:wght@700&display=swap');
+#definicion{
+    font-weight: bolder;
+}
+p{
+    /*width: 20%;
+    height: 10px;*/
+    text-align: justify;
+    overflow: scroll;
+    text-indent: 2rem;
+    font-style: italic;
+    font-stretch: ultra-condensed;
+    font-family: 'Coming Soon', cursive;
+}
+section{
+    background-color: pink;
+}
+footer{
+    background-color: white;
+}
