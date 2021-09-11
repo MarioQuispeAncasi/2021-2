@@ -10,4 +10,28 @@ id  #nombre-del-id      id="nombre-de-id*/
     background-position: top left, 100% center;
     background-origin: border-box,content-box;
     padding: 150px;
+    color: white;
+}
+/*
+sombras de texto
+*/
+h1{
+    color: cornflowerblue;
+    text-shadow: -5px 4px 6px gray;
+    font-size: 400%;
+}
+/*
+Redondear bordes
+*/
+header{
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px 20px;
+    background-color: orange;
+    width: 90%;
+    text-align: center;
+}
+nav{
+    border: 3px solid yellow;
+    border-radius: 50px;
 }
