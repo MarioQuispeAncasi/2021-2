@@ -33,12 +33,13 @@ header{
     margin-bottom: 20px;
 }
 nav{
-    border: 3px solid yellow;
+    border: 3px solid blue;
     border-radius: 50px;
+    background-color: rgba(150,200,230,0.9);
 }
 
 footer{
-    background-color: black;
+    background-color:rgb(100, 50, 200);
     color: white;
     text-align: center;
 }
