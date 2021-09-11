@@ -35,7 +35,8 @@ header{
 nav{
     border: 3px solid blue;
     border-radius: 50px;
-    background-color: rgba(150,200,230,0.7);
+    /*background-color: rgba(150,200,230,0.7);*/
+    background-color: hsla(58, 90%, 80%, 0.93);
 }
 
 footer{
