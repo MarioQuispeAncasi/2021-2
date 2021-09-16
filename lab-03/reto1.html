@@ -14,29 +14,35 @@
     
     <link rel="stylesheet" href="css/lab03.css" type="text/css" />
     <script>
-        var hoy = new Date();
-        var hora = hoy.getHours();
 
-        var nombre;
-        var saludo;
-        nombre=window.prompt("Ingresa tu nombre");
-        if(hora<12) saludo="Buenos dias.....";
+    var numero = window.prompt("Ingresa un numero del 1 al 20");
+    var max=20;
+    var i=0;
+    if (numero >20) window.alert("El numero no esta entre 1 al 20");
+    if(numero<=20){
+        while(i<=numero){
+            if(i%2==0) {
+                document.writeln("<p>" + i + "</p>")
+            }
+            else document.writeln("<p style='color:blue'>" + i + "</p>")
+            i++;
 
-        else if(hora>12){
-            if(hora<18) saludo="Buenas tardes";
-            else saludo="Buenas noches";
         }
+    }
+    
 
-        document.writeln("<h1> " + saludo + " " + 
-            nombre + "</h1>");
 
-    /*Sentencia repetitiva*/
-    var max = 10;
+
+
+
+    /*var max = 21;
     var i = 0;
     while(i<max){
-        document.writeln("<p>" + i + "</p>");
+        if(i%2==0){
+            document.write( "<p style='color:yellow' " + i + "</p> ");
+        } else document.write("<p style='color:blue'>" + i);
         i++;
-    }
+    }*/
 
     
     </script>
