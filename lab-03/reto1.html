@@ -14,19 +14,29 @@
     
     <link rel="stylesheet" href="css/lab03.css" type="text/css" />
     <script>
-        /*Convertir datos*/
-        var op1, op2;
-        var suma;
-        op1=window.prompt("Ingresa operando 1");
-        op2=window.prompt("Ingresa operando 2");
-        suma= parseInt(op1)+ parseInt(op2);
-        document.writeln("<h1>La suma es " + suma +
-            "</h1>")
-        document.writeln("<h1>El número 'F' en base 16 es " + 
-            parseInt("F",16) + "</h1>")
-        document.writeln("<h1>El número '1111' en base 2 es " + 
-            parseInt("1111",2) + "</h1>")
-        
+        var hoy = new Date();
+        var hora = hoy.getHours();
+
+        var nombre;
+        var saludo;
+        nombre=window.prompt("Ingresa tu nombre");
+        if(hora<12) saludo="Buenos dias.....";
+
+        else if(hora>12){
+            if(hora<18) saludo="Buenas tardes";
+            else saludo="Buenas noches";
+        }
+
+        document.writeln("<h1> " + saludo + " " + 
+            nombre + "</h1>");
+
+    /*Sentencia repetitiva*/
+    var max = 10;
+    var i = 0;
+    while(i<max){
+        document.writeln("<p>" + i + "</p>");
+        i++;
+    }
     </script>
 </head>
 
