@@ -32,4 +32,8 @@ for(var i=0;i<nodos.length;i++){
     }
 }
 
+
 document.getElementbyID("rpta2").innerHTML = am;
+
+
+
