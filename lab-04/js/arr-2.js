@@ -29,6 +29,48 @@ for(var i=0;i<nodos.length;i++){
     }
 }
 
-
+/*
 var total = aa.concat(am);
-document.getElementbyID("rpta2").innerHTML = total;
+document.getElementbyID("rpta2").innerHTML = total;*/
+
+/*Cosas dificiles */
+
+//No quiero eliminar y quiero agregar
+/*
+document.getElementbyID("rpta1").innerHTML =am;
+am.splice(1,0,"Unlambda","Malburg");
+document.getElementbyID("rpta2").innerHTML=am;*/
+
+//Elinar y agregar a la vez
+/*
+document.getElementbyID("rpta1").innerHTML =am;
+am.splice(3,1,"Ooak!","Unlambda","Malburg");
+document.getElementbyID("rpta2").innerHTML=am;*/
+
+//Quiero eliminar sin agregar
+/*
+document.getElementbyID("rpta1").innerHTML = am;
+am.splice(3,2);
+document.getElementbyID("rpta2").innerHTML= am;*/
+
+//Puedo agregar al inicio
+document.getElementbyID("rpta1").innerHTML =am;
+am.unshift("Zimbu");
+document.getElementbyID("rpta2").innerHTML=am;
+
+
+//Puedo agregar al final
+am.push("Zimbu2")
+document.getElementbyID("rpta2").innerHTML=am;
+
+//Colas y pilas
+/*
+document.getElementbyID("rpta1").innerHTML =am;
+var x= am.pop();
+document.getElementbyID("rpta2").innerHTML=am;
+*/
+
+document.getElementbyID("rpta1").innerHTML =am;
+var x= am.shift();
+document.getElementbyID("rpta2").innerHTML=am;
+
