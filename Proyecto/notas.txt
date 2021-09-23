@@ -1,0 +1,1 @@
+el h1 tiene los mismos estilos que un h2 (tamaño, fuente, letra)
