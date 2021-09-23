@@ -1,0 +1,107 @@
+En la consola del navegador del lab 5
+•	console.log(document.querySelector('h1').textContent)
+Lenguajes de Programacion
+•	document.querySelector("h1").textContent += "2021-2 UL"
+'Lenguajes de Programacion2021-2 UL'
+•	document.body.childNodes;
+//Muestra los nodos hijos 
+NodeList(28) [text, h1.loquesea, text, p, text, br, br, text, p, text, form, text, div#lateral, text, div#contenido, text, div#contenido2, text, footer, text, comment, text, comment, text, script, text, script, div#new-tab-sidebar.hidden]
+•	document.body.childNodes.length;
+//CANTIDAD DE ELEMENTOS
+28
+•	document.body.childNodes[0];
+#textassignedSlot: nullbaseURI: "http://127.0.0.1:5500/lab-05/index.html"childNodes: NodeList []data: "\n    "firstChild: nullisConnected: truelastChild: nulllength: 5nextElementSibling: h1.loqueseanextSibling: h1.loqueseanodeName: "#text"nodeType: 3nodeValue: "\n    "ownerDocument: documentparentElement: bodyparentNode: bodypreviousElementSibling: nullpreviousSibling: nulltextContent: "\n    "wholeText: "\n    "[[Prototype]]: Text
+•	document.body.childNodes[1];
+<h1 class="loquesea">Lenguajes de Programacion2021-2 UL</h1>
+•	for(var i=0;i<nodos.length;i++){
+   		 console.log(nodos[i]);
+}
+//recorrer todos los nodos y mostarlos
+ 
+•	var nodo1=document.getElementById("antiguo");
+•	var nodo2=nodo1.parentNode
+•	console.log(nodo2)
+ 
+•	nodo1=document.getElementById("antiguo").parentNode;
+<div id="contenido">…</div>
+•	var nodo3=document.getElementById("contenido")
+•	var nodo4=nodo3.firstChild;
+•	console.log(nodo4);
+#text
+•	console.log(nodo3.tagName);
+VM2427:1 DIV
+•	console.log(nodo4.tagName);
+•	console.log(nodo4.nodeType)
+3
+•	console.log(nodo4.textContent) //Contenido del nodo
+Hrecorrer hermanos del nodo
+•	var node5=nodo4.nextSibling.nextSibling
+•	var node5=nodo4.nextSibling.nextSibling.textContent
+•	console.log(nodo4.nextSibling.nextSibling.textContent)
+•	console.log(nodo3.lastChild)
+•	console.log(nodo3.lastChild.previousSibling)
+<ul class="lp jvm" id="moderno">…</ul>
+•	var nodosH2=document.getElementsByTagName("h2")//Reúne los elementos h2
+•	for(var i=0;i<nodosH2.length;i++){
+    	console.log(nodosH2[i])
+}
+//recorrer y mostrar todos las etiqueta con h2
+ 
+•	var nodoLP=document.getElementsByClassName("lp") //todos los nodos de la clase lp
+•	for(var i=0;i<nodosH2.length;i++){
+    console.log(nodoLP[i])
+}
+VM3845:2 <ul class="lp" id="antiguo">…</ul>
+VM3845:2 <ul class="lp jvm" id="moderno">…</ul>
+•	document.querySelector("h2") //te da el primer h2
+•	document.querySelectorAll("h2") //te da todos los h2
+NodeList(4) [h2, h2, h2, h2]0: h21: h22: h23: h2length: 4[[Prototype]]: NodeList
+var x= document.querySelectorAll("h2")
+undefined
+for(var i=0;i<x.length;i++){
+    console.log(i+"....----> "+ x[i])
+}
+VM4278:2 0....----> [object HTMLHeadingElement]
+VM4278:2 1....----> [object HTMLHeadingElement]
+VM4278:2 2....----> [object HTMLHeadingElement]
+VM4278:2 3....----> [object HTMLHeadingElement]
+Undefined
+for (e in x){
+    console.log("Nodo " + e)
+}
+VM4374:2 Nodo 0
+VM4374:2 Nodo 1
+VM4374:2 Nodo 2
+VM4374:2 Nodo 3
+VM4374:2 Nodo entries
+VM4374:2 Nodo keys
+VM4374:2 Nodo values
+VM4374:2 Nodo forEach
+VM4374:2 Nodo length
+VM4374:2 Nodo item
+•	for(var i = 0;i<x.length;i++){
+    var nodox=x[i];
+    console.log(nodox);
+}
+VM5660:3 <h2>Los antiguos</h2>
+VM5660:3 <h2>Los modernos</h2>
+VM5660:3 <h2>Referencias</h2>
+VM5660:3 <h2>Resultados</h2>
+•	document.getElementById("antiguo").innerHTML;//te muestra todo el código html
+•	document.querySelector("a").getAttribute("href")//mostrar el href del primero elemento a
+•	document.querySelector("h1").setAttribute("id","xyz2021");//poner atributo asociado al h1
+•	document.querySelector("h1").hasAttribute("style");//para saber si tiene el atributo style
+False
+•	document.querySelector("h1").hasAttribute("class");//para saber si tiene el atributo class
+true
+•	document.getElementById("moderno").classList;
+DOMTokenList(2) ['lp', 'jvm', value: 'lp jvm']
+document.getElementById("moderno").classList.contains("jvm");//para saber si en su lista de clases tiene jvm
+true
+•	document.getElementById("moderno").classList.contains("abc");
+false
+//agregar o remover clase
+•	document.getElementById("moderno").classList.add("abc");//agregar
+•	document.getElementById("moderno").remove("abc");//remover
+//modificar la estructura del dom
+
