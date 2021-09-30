@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Jose Gregorio</title>
-    <!--<link rel="stylesheet" href="estilo.css">-->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link href="iconos/css/all.css" rel="stylesheet">
-      <script  href="iconos/js/all.js"></script>
+    <script  href="iconos/js/all.js"></script>
 </head>
 <body>
-    <header>
+    <header class ="text-blue-500 text-3xl text-center pt-5">
         
         <img src="logo-clinica.png" alt="">
         <input type="checkbox" id="check">
@@ -259,23 +260,23 @@
         <div class="cpr">    
             <p>DISEÑADO POR TECMADI S.A.C.</p>
         </div>
-    </footer>
+</footer>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-<script type="text/javascript">
-$( '#btn-validate' ).click(function(){
-  var $captcha = $( '#recaptcha' ),
-      response = grecaptcha.getResponse();
-    if (response.length === 0) {
-    $( '.msg-error').text( "reCAPTCHA is mandatory" );
-    if( !$captcha.hasClass( "error" ) ){
-      $captcha.addClass( "error" );
+    <script type="text/javascript">
+    $( '#btn-validate' ).click(function(){
+    var $captcha = $( '#recaptcha' ),
+        response = grecaptcha.getResponse();
+        if (response.length === 0) {
+        $( '.msg-error').text( "reCAPTCHA is mandatory" );
+        if( !$captcha.hasClass( "error" ) ){
+        $captcha.addClass( "error" );
+        }
+    } else {
+        $( '.msg-error' ).text('');
+        $captcha.removeClass( "error" );
+        alert( 'reCAPTCHA marked' );
     }
-  } else {
-    $( '.msg-error' ).text('');
-    $captcha.removeClass( "error" );
-    alert( 'reCAPTCHA marked' );
-  }
-})
-</script>
-</body>
+    })
+    </script>
+    </body>
 </html>
