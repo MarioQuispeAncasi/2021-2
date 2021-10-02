@@ -1,3 +1,6 @@
+/*
+EJEMPLO PARA JSON
+*/
 var btnSolicitar = document.getElementById("btnSolicitar");
 var btnMostrar = document.getElementById("btnMostrar");
 
@@ -10,7 +13,7 @@ function cargar(event) {
     var f = event.target.files[0];
     // Validar el tipo de archivo
 
-    if ( f.type.indexOf("xml") === -1) {
+    if ( f.type.indexOf("json") === -1) {
         alert("El tipo del archivo no puede procesarse !!");
         return;
     }
@@ -44,10 +47,9 @@ function cargar(event) {
 }
 
 function mostrar() {
-    var parser = new DOMParser();
 
-    // Convertir la cadena a ...xml
-    var cadenaXML = parser.parseFromString(contenido,"text/xml");
+    // Convertir la cadena a ... json
+    var objetoJSON = JSON.parse(contenido);
 
     // AHora hay que mostrar
     var parrafo = document.createElement("p");
@@ -56,12 +58,12 @@ function mostrar() {
 
     // Asignar valores a cada nodo
     titulo.id = "superheroe";
-    titulo.textContent = cadenaXML.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+    titulo.textContent = objetoJSON.nombre;
     titulo.classList.add("h1");
 
-    parrafo.textContent = cadenaXML.getElementsByTagName("descripcion")[0].childNodes[0].nodeValue;
+    parrafo.textContent = objetoJSON.descripcion;
 
-    imagen.src = cadenaXML.getElementsByTagName("imagen")[0].childNodes[0].nodeValue;
+    imagen.src = objetoJSON.imagen;
 
     // Agregar al DOM
     document.getElementById("contenido").appendChild(titulo);
