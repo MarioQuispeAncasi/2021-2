@@ -45,7 +45,7 @@ header img{
  }
 
  #check{
-     display: none;
+     display: none;/*preguntar al mormon*/
  }
 
  .boton{
@@ -232,7 +232,7 @@ background: #0843AA;
     padding: 30px;
     margin: 30px;
     overflow: hidden;
-    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);/*falta*/
     border-radius: 10px;
     position: relative;
     text-align: left;
