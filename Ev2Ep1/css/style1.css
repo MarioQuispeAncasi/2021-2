@@ -1,0 +1,55 @@
+*{
+    background-color: gray;
+}
+.todo{
+    display: flex;
+}
+.aaa{
+    width: 75%;
+    margin-left: auto;
+}
+.bbb{
+    width: 75%;
+    margin-left: auto;
+    padding-top: 5rem;
+}
+.tablero{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.tablero th{
+    padding: .5em;
+    list-style: none;
+
+}
+.tablero td{
+    border:1px solid;
+    width: 2rem;
+    height: 2rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+.claro{
+    background-color: white;
+
+}
+.oscuro{
+    background-color: black;
+
+}
+.invertir{
+    -webkit-transform: rotate(-180.0deg);
+}
+.invertir1{
+    -webkit-transform: rotate(-180.0deg);
+}
+.q{
+    color: white;
+}
+.oscuro:hover {
+    background-color: white;
+    opacity: 1;
+    pointer-events: auto;
+}
