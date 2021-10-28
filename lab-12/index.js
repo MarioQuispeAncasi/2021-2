@@ -1,14 +1,35 @@
 const http = require("http");
-const fs = require("fs");
 
 //Incorporar express 
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const hostname = "localhost";
 const port = process.env.port || 3000;
 
 //Instanciar a express
 const app = new express();
+
+//Setaer a express
+app.use(express.urlencoded{extended: true})
+app.use(express.json())
+
+//Otra forma de leer los archivos estaticos
+app.use(express.static( __dirname + '/public'))
+app.post('/alumno',(req,res,next))
+
+
+//....Definicion de rutas
+app.post('/alumno',(req,res,next)=>{
+    res.end("Recibi un POST y obtuve " + req.body.codigo +
+    " "  +req.body.nombre)
+})
+
+app.get('/alumno',(req,res,next)=>{
+    res.end("Recibi un GET y obtuve " + req.body.codigo +
+    " "  +req.body.nombre)
+})
+//...Fin de defincion de rutas
 
 //....definir rutas
 //....La ruta de la welcome page
