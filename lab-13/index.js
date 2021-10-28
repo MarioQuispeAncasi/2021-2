@@ -12,6 +12,7 @@ const hostname = 'localhost'
 */
 //Declarar los modulos y dependencias
 
+//modulos
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -19,6 +20,10 @@ const morgan = require("morgan");//loguea de peticiones
 const favicon = require("serve-favicon");//manejo de iconos
 const session = require("express-session");//identificador hash unico por cada navegador conectado que permite identificar quien hace la peticio(prot http), almanenada en la memoria del servidor
 const ejslayout = require("express-ejs-layouts");//generar contenido dinamico para despues ser rederizado
+
+//dependencias
+
+const r1 = require("./routes/alumno1.js");
 
 //Declarar y configurar express
 
@@ -50,6 +55,10 @@ app.use(express.static(__dirname + "/public"));//contenido estatico
 
 //La aplicacion debe estar en....
 //Van las rutas ..esto va cambiar
+    //Esta parte la hizo el alumno 1
+app.use("/login", r1);
+
+    //Esta parte la hzio el alumno 2
 
 //Esta pate la hizo el alumno 1
 

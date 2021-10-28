@@ -1,33 +1,44 @@
 // Instanciar a Express
-const app = new express();
+const express = require("express");
+const ruta = new express.Router();
+
 
 // Setear a express
-app.use( express.urlencoded( {extended: true }) )
-app.use( express.json() )
+ruta.use( express.urlencoded( {extended: true }) )
+ruta.use( express.json() )
 
 // Otra forma de leer los archivos estaticos
-app.use( express.static( __dirname + '/public'))
+ruta.use( express.static( __dirname + '/public'))
 
 //----- DEFINICION DE RUTAS
-app.post('/alumno' , (req,res,next) => {
+ruta.route('/')
+    .post( (req,res,next) => {
     res.end("Recibi un POST y obtuve " + req.body.codigo + " " + req.body.nombre);
 }) 
 
-app.get('/alumno' , (req,res,next) => {
+ruta.route('/')
+    .get( (req,res,next) => {
     res.end("Recibi un GET y obtuve " + req.query.codigo + " " + req.query.nombre);
 }) 
 
-app.get('/alumno/:codigo/:nombre', (req,res,next) => {
+ruta.route('/:codigo/:nombre')
+    .get( (req,res,next) => {
     res.end("Recibi un GET v2 y obtuve " + req.params.codigo + " " + req.params.nombre);
 
 })
 
-app.put("/alumno", (req,res,next) => {
+ruta.route("/")
+    .put( (req,res,next) => {
     res.statusCode = 405
     res.end("Metodo no implementado aun ...")
 })
 
-app.delete("/alumno", (req,res,next) => {
+ruta.route("/")
+.delete( (req,res,next) => {
     res.statusCode = 405
     res.end("Metodo no implementado aun ...")
 })
+
+
+//No olvidar que hay que exportar
+module.exports = ruta;
