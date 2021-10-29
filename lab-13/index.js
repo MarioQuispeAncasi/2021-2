@@ -113,18 +113,43 @@ const r2 = require("./routes/alumno2.js");
 
 // instanciar Express
 const app = express();
+    //Setear el valor del puerto
 app.set('port', process.env.port || 3000);
-app.set('env','development'); // test stage preview production
+    /*indicar el entorno 
+    test stage preview production*/
+app.set('env','development'); 
 
 // Motor de plantillas
+/*VISTA: DATA QUE ES INSERTADA DENTRO DE LA PLATILLA
+    O LAYOUT O TEMPLATE*/
+/**Basado en const ejsLayout = 
+    require("express-ejs-layouts"); 
+   ejs: embeded javascrip*/
+   /**que no haya cachee en las vistas 
+        es decir cada peticion que hagamos hacia la 
+        aplicacion la vista se vuelva a leer del 
+        disco
+   */
 app.set('view cache', "false");
+/**QDefinir engine: 
+ * ejs lo va buscar en el modulo
+ * const ejsLayout = 
+    require("express-ejs-layouts"); 
+*/
 app.set("view engine", "ejs");
+/*Directorio views
+    dar el valor: directorio a la carpeta views*/
 app.set("views",__dirname + "/views");
+/*Dar el valor del layout por defecto
+    poner la ubicación del archivo */
 app.set("layout","../layouts/plantilla1");
+
 
 // Middleware
 app.use(ejsLayout);
+//iconito en la pestaña del navegador
 app.use( favicon( __dirname + "/public/favicon.ico") );
+
 app.use( morgan("combined") );
 
 app.use( cookieParser() );
@@ -137,6 +162,7 @@ app.use( session( {
 app.use( express.static( __dirname + "/public"));
 
 // La aplicacion debe estar en ...
+//Van las rutas (solo va cambiar esta parte)
 // Esta parte la hizo el alumno 1
 app.use("/login", r1);
 // Esta parte la hizo el alumno 2
@@ -144,6 +170,7 @@ app.use("/plantillas",r2);
 
 
 // Instanciar el server
+    //pasar como apremtro express(app
 const server = http.createServer(app);
 server.listen( app.get('port') , hostname , () => {
     console.log(`Servidor iniciado en puerto ... ${app.get('port')}`);
