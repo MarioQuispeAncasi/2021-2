@@ -81,13 +81,31 @@ La reglas:
 6. Iniciar al app / servidor
 */
 
+//Modulos
 const express = require("express");
 const bodyParser = require("body-parser");
+//Definir cookies, las aplicaciones pueden generar cookies
 const cookieParser = require("cookie-parser");
+//modulo para logueo de peticiones
 const morgan = require("morgan");
+//manejo de iconos
 const favicon = require("serve-favicon");
+/*identificador hash unico por cada navegador 
+conectado que permite identificar quien hace la 
+peticion(prot http), almanenada en la memoria del 
+servidor o e la app. Se recomenda que los objetos
+que se guardan en la sesion no sean muy granddres
+con el fin de que no se sature el servidor*/
 const session = require("express-session");
+/*generar contenido dinamico para despues 
+ser rederizado
+motor de plantillas: parte de express que nos
+permite contenido dinámico. SOn como plantillas que
+tienen cierta estructura, la cual solo vamos a
+completar las aprtes de manera dinámica y todo eso
+se va a enviar al navegador para ser renderizado*/
 const ejsLayout = require("express-ejs-layouts");
+
 
 // Dependencias
 const r1 = require("./routes/alumno1.js");
