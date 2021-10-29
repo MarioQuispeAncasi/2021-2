@@ -131,7 +131,7 @@ app.set('env','development');
         disco
    */
 app.set('view cache', "false");
-/**QDefinir engine: 
+/**Definir engine: 
  * ejs lo va buscar en el modulo
  * const ejsLayout = 
     require("express-ejs-layouts"); 
