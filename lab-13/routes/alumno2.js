@@ -40,14 +40,18 @@ ruta.route('/ejemplo5')
             { name : "Bruno Diaz", organizacion: "Batman Inc", power: 2},
             { name : "Bob Esponja", organizacion: "Nicklodeon", power: 0}
         ]
-        var afrase  = "Al infinito y mas alla..";
+        var frase  = "Al infinito y mas alla..";
 
         if(!req.session.contador){
             req.session.contador = 1;
         }else{
             req.session.contador++;
         }
-            res.json(superh);
+        res.locals.contadorVista = req.session.contador;
+        res.render("welcome4", {p1:superh,p2:frase,layout:'../layouts/plantilla3'});
+
+        
+        res.json(superh);
     }) 
 
 // NO OLVIDAR EXPORTAR
