@@ -51,7 +51,7 @@ ruta.route('/ejemplo5')
         res.render("welcome4", {p1:superh,p2:frase,layout:'../layouts/plantilla3'});
 
         
-        res.json(superh);
+        //res.json(superh);
     }) 
 
 // NO OLVIDAR EXPORTAR
