@@ -1,7 +1,7 @@
 const models = require("../models");
 const usr = models.Usuario;
 
-const inserta = async(cod, nomb, eda) => {
+const inserta = async (cod, nom, eda) => {
     console.log("==> Inicio de insert")
 
     return usr.create(

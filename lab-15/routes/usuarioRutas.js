@@ -1,37 +1,69 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const sequelize = require("sequelize");
-const models = require("../models");
+const sequelize = require("sequelize")
+const models = require("../models")
 
-//Modulos de acceso a base de datos
-const query = require("../persistencia/selectall");
+// Modulos de acceso a BD
+const query = require("../persistencia/selectall")
+const inserta = require("../persistencia/insert")
 
 const usuario = models.Usuario;
 
-
 const rutas = express.Router();
 
-//Ruta de inicio o welcome page
+// Setear a express
+rutas.use( express.urlencoded( {extended: true }) )
+rutas.use( express.json() )
+
+// Ruta de inicio o welcome page
 rutas.route("/")
-    .get((req,res,next)=>{
-        res.render("inicio",{layout:"../layouts/plantilla1"})
+    .get( (req,res,next) => {
+        res.render("inicio", {layout: "../layouts/plantilla1"})
     })
-    //para que esto funcione se necesita exportar
-    //No olvidar
 
-    //La ruta princiapl (2da ruta) mostar vista
-    rutas.route("/principal")
-        .get(async (req,res,next) =>{
-            //Aqui debo leer la base de datos
-            //y mostar los datos en la vista 
-            //principal. Voy a usar la plantilla 2
-            await query()
-                .then( (listado) =>{
-                    res.render('principal',{
-                        p1:listado,
-                        layout:"../layouts/plantilla2"
-                    })
+// La ruta principal
+rutas.route("/principal")
+    .get( async (req,res,next) => {
+        // Aqui debo leer la BD y mostrar los datos en la vista principal
+        // Voy a usar la pantilla2
+        await query()
+            .then( (listado) => {
+                res.render('principal',{ p1: listado, layout: "../layouts/plantilla2"})
+            } )
+            .catch( (error) => {
+                console.log("Ocurrio un error en el query", error)
+            })
+
+    })
+
+// La ruta para agregar
+rutas.route("/agregar")
+    .post( async(req,res,next) =>{
+        /*
+        console.log(req.body.codigo)
+        console.log(req.body.nombre)
+        console.log(req.body.edad)
+        */
+       await inserta(
+                req.body.codigo,
+                req.body.nombre,
+                req.body.edad
+            )
+            .then( async () =>{
+                await query()
+                .then( (listado) => {
+                    res.render('principal',{ p1: listado, layout: "../layouts/plantilla2"})
                 } )
-        })
+                .catch( (error) => {
+                    console.log("Ocurrio un error en el query", error)
+                })                
+            })
+            .catch( (error) => {
+                console.log("Ocurrio un error en el insert", error)
+            })
 
-        module.exports = rutas
+    })
+
+
+// No olvidar
+module.exports = rutas
