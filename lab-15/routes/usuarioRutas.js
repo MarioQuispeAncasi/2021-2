@@ -6,6 +6,7 @@ const models = require("../models")
 // Modulos de acceso a BD
 const query = require("../persistencia/selectall")
 const inserta = require("../persistencia/insert")
+const elimina = require("../persistencia/delete")
 
 const usuario = models.Usuario;
 
@@ -64,6 +65,43 @@ rutas.route("/agregar")
 
     })
 
+    //La ruta apra eliminar un registro
+rutas.route ("eliminar")
+    .post( async (req,res,next) =>{
+        await query()
+            .then( (listado) => {
+                res.render('principal',{ p1: listado, layout: "../layouts/plantilla2"})
+            } )
+            .catch( (error) => {
+                console.log("Ocurrio un error en el query", error)
+            })
+
+    })
+
+// La ruta para agregar
+rutas.route("/agregar")
+    .post( async(req,res,next) =>{
+        /*
+        console.log(req.body.codigo)
+        console.log(req.body.nombre)
+        console.log(req.body.edad)
+        */
+       await elimina(
+                req.body.id
+            )
+            .then( async () =>{
+                await query()
+                .then( (listado) => {
+                    res.render('principal',{ p1: listado, layout: "../layouts/plantilla2"})
+                } )
+                .catch( (error) => {
+                    console.log("Ocurrio un error en el query", error)
+                })                
+            })
+            .catch( (error) => {
+                console.log("Ocurrio un error en el delete", error)
+            })
+    })
 
 // No olvidar
 module.exports = rutas
