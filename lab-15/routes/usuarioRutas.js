@@ -103,5 +103,19 @@ rutas.route("/agregar")
             })
     })
 
+
+//La ruta para editar
+rutas.route("/editar")
+    .post((req,res,next) =>{
+        //Debo ir a la bd a obtener la información
+        await
+    })
+
+//La ruta para editar
+rutas.route("/actualizar")
+    .post((req,res,nect) =>{
+        //Debo actualizar la data en la bd y luego mostar la vista principal
+    
+    })
 // No olvidar
 module.exports = rutas
