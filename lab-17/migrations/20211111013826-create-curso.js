@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       codigo: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primarykey: true
       },
       nombre: {
         type: Sequelize.STRING

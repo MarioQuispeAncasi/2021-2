@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      models.Alumno.belongsto(models.Curso,{
+        foreignkey:'cursoId',
+        as: 'cursito'
+      })
     }
   };
   Alumno.init({
