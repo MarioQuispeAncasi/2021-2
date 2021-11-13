@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "123456789",
-    "database": "lab-17-1",
+    "database": "nota-4",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
