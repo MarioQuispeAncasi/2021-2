@@ -11,14 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Curso.hasMany(models.Alumno,{
-        foreignKey: 'cursoId',
-        as: 'alumnitos'
+      curso.hasMany(models.Alumno,{
+        foreignkey:'cursoId',
+        as:'alumnitos'
       });
     }
   };
   Curso.init({
-    codigo: DataTypes.INTEGER,
+    codigo: {
+      type:DataTypes.INTEGER,
+      primarykey: true
+    },
     nombre: DataTypes.STRING,
     ciclo: DataTypes.INTEGER
   }, {
