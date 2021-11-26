@@ -50,6 +50,7 @@ app.use( session( {
 app.use( express.static( __dirname + "/public"));
 
 /* HEADER */
+/*
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4000')
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,DELETE,PUT')
@@ -57,7 +58,7 @@ app.use(function(req, res, next) {
     res.setHeader('Access-Control-Max-Age','60')
     next();
   });
-
+  */
 // La aplicacion debe estar en ...
 // Esta parte la hizo el alumno 1
 app.use("/", r1);
